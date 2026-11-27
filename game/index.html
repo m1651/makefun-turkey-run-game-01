@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Gobble's Great Escape — a turkey escape game</title>
+<style>
+  html, body {
+    margin: 0; padding: 0; height: 100%;
+    background: #2b1a12;
+    display: flex; align-items: center; justify-content: center;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+  }
+  #wrap { position: relative; width: min(100vw, 1280px); }
+  canvas {
+    display: block; width: 100%; height: auto;
+    background: #f7c873; border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.55);
+    cursor: pointer;
+  }
+  #hint {
+    position: absolute; left: 0; right: 0; bottom: -26px;
+    text-align: center; color: #d8b48a; font-size: 13px; letter-spacing: .04em;
+  }
+</style>
+</head>
+<body>
+  <div id="wrap">
+    <canvas id="game" width="960" height="540"></canvas>
+    <div id="hint">SPACE / CLICK to jump &middot; DOWN / S to duck &middot; R to run again &middot; M to mute</div>
+  </div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
